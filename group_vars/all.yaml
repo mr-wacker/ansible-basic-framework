@@ -1,0 +1,10 @@
+---
+
+test_servers:
+  - 8.8.8.8
+  - 4.4.4.4
+
+ports:
+  22: ssh
+  80: http
+  3306: mysql

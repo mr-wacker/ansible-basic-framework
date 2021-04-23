@@ -1,3 +1,17 @@
 - name: Print Ansible Version for Testing Purpose
   debug:
-    msg: "Ansible Version: {{ ansibleVersion.stdout }}"
+    msg: "Ansible Version: {{ ansible_version }}"
+  notify: 
+  - Run Handler # only runs when changed=1
+
+- name: Command "whoami"
+  debug:
+    msg: "whoami : {{ lookup('env','USER') }}"
+
+- name: Template a file to ./roles/test/files/template.j2
+  template:
+    src: main.j2
+    dest: ./roles/test/files/template.html
+    owner: "{{ lookup('env','USER') }}"
+    group: staff
+    mode: '0644'
