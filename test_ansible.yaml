@@ -1,6 +1,6 @@
 ---
 
-  - name: Ansible  test
+  - name: Ansible  Test
     hosts: all
     roles:
       - test

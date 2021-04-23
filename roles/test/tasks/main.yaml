@@ -1,2 +1,3 @@
-- name: Ansible ping module
-  ping:
+- name: Print Ansible Version for Testing Purpose
+  debug:
+    msg: "Ansible Version: {{ ansibleVersion.stdout }}"
