@@ -23,3 +23,5 @@ This is a basic framework of Ansible.
 │           └── main.j2
 └── test_ansible.yaml
 ```
+
+For testing purpose, it produces `./roles/files/template.html` 
